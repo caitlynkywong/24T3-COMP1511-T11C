@@ -1,5 +1,5 @@
 // Farmer's Farm
-// part1_farm.c
+// part2_farm.c
 //
 // This program was written by T11C
 // on 08/10/2024
