@@ -35,8 +35,6 @@ struct player {
 
 
 void print_farm(struct farm_entity farm[SIZE][SIZE]);
-void initialise_farm(struct farm_entity farm[SIZE][SIZE]);
-struct player place_farmer(struct farm_entity farm[SIZE][SIZE]);
 
 
 int main(void) {
