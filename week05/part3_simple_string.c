@@ -1,9 +1,9 @@
 // part3_simple_string.c
 //
-// This program was written by Sofia De Bellis (z5418801)
-// on March 2024
+// This program was written by Sofia De Bellis (z5418801) on March 2024
+// and lightly edited by Caitlyn Wong (z5360361)
 //
-// This program demonstrates how to work with strings in C.
+// This program demonstrates how to work with strings in C
 
 
 #include <stdio.h>

@@ -7,10 +7,13 @@
 // This program is a simple game that allows the user to build a farm.
 // The user can place barns, trees, and coops in the farm.
 
+
 #include <stdio.h>
+
 
 #define SIZE 5
 #define TREE_POINTS -10
+
 
 enum entity_type {
     COOP,
@@ -30,9 +33,11 @@ struct player {
     int col;
 };
 
+
 void print_farm(struct farm_entity farm[SIZE][SIZE]);
 void initialise_farm(struct farm_entity farm[SIZE][SIZE]);
 struct player place_farmer(struct farm_entity farm[SIZE][SIZE]);
+
 
 int main(void) {
     struct farm_entity farm[SIZE][SIZE];
@@ -100,6 +105,7 @@ int main(void) {
 
     return 0;
 }
+
 
 // Function prints the map of the farm
 //

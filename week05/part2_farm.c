@@ -4,13 +4,16 @@
 // This program was written by T11C
 // on 08/10/2024
 //
-// This program is a simple game that allows the user to build a farm.
-// The user can place barns, trees, and coops in the farm.
+// This program is a refactored version of part1_farm.c with the code
+// moved into functions
+
 
 #include <stdio.h>
 
+
 #define SIZE 5
 #define TREE_POINTS -10
+
 
 enum entity_type {
     COOP,
@@ -30,9 +33,13 @@ struct player {
     int col;
 };
 
+
 void print_farm(struct farm_entity farm[SIZE][SIZE]);
 void initialise_farm(struct farm_entity farm[SIZE][SIZE]);
+void place_farm_structures(struct farm_entity farm[SIZE][SIZE]);
 struct player place_farmer(struct farm_entity farm[SIZE][SIZE]);
+void place_coops(struct farm_entity farm[SIZE][SIZE]);
+
 
 int main(void) {
     struct farm_entity farm[SIZE][SIZE];
@@ -49,6 +56,7 @@ int main(void) {
 
     return 0;
 }
+
 
 // Function prints the map of the farm
 //
@@ -78,6 +86,7 @@ void print_farm(struct farm_entity farm[SIZE][SIZE]) {
     }
 }
 
+// Initialise the farm
 void initialise_farm(struct farm_entity farm[SIZE][SIZE]) {
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
@@ -87,6 +96,7 @@ void initialise_farm(struct farm_entity farm[SIZE][SIZE]) {
     }
 }
 
+// Place the barns and trees in the farm
 void place_farm_structures(struct farm_entity farm[SIZE][SIZE]) {
     printf("Enter barns and trees:\n");
 
@@ -110,6 +120,7 @@ void place_farm_structures(struct farm_entity farm[SIZE][SIZE]) {
     }
 }
 
+// Place the farmer in the farm
 struct player place_farmer(struct farm_entity farm[SIZE][SIZE]) {
     printf("Enter the starting position of the farmer: ");
 
@@ -128,6 +139,7 @@ struct player place_farmer(struct farm_entity farm[SIZE][SIZE]) {
     return farmer;
 }
 
+// Place the coops in the farm
 void place_coops(struct farm_entity farm[SIZE][SIZE]) {
     printf("Enter the position and points of the coop(s):\n");
 
